@@ -18,9 +18,13 @@ public class MyHashTable<K, V> {
     private int M = 11; // derault number o† chains
     private int size;
 
-    public MyHashTable() {}
+    public MyHashTable() {
+        this.chainArray = new HashNode[M];
+        this.size = 0;
+    }
 
     public MyHashTable(int M) {
+        this.M = M;
         this.chainArray = new HashNode[M];
         this.size = 0;
     }
