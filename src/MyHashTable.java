@@ -28,7 +28,9 @@ public class MyHashTable<K, V> {
         this.chainArray = new HashNode[M];
         this.size = 0;
     }
-    private int hash (K key) { }
+    private int hash (K key) {
+        return (key.hashCode() & 0x7fffffff) % M;
+    }
     public void put (K key, V value) {}
     public V get (K key) {}
     public V remove (K key) {}
