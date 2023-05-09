@@ -31,7 +31,21 @@ public class MyHashTable<K, V> {
     private int hash (K key) {
         return (key.hashCode() & 0x7fffffff) % M;
     }
-    public void put (K key, V value) {}
+    public void put (K key, V value) {
+        int index = hash(key);
+        HashNode<K, V> node = chainArray[index];
+        while (node != null) {
+            if (node.key.equals(key)) {
+                node.value = value;
+                return;
+            }
+            node = node.next;
+        }
+        node = new HashNode<K, V>(key, value);
+        node.next = chainArray[index];
+        chainArray[index] = node;
+        size++;
+    }
     public V get (K key) {}
     public V remove (K key) {}
     public boolean contains (V value) {}
