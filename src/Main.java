@@ -8,6 +8,8 @@ public class Main {
         System.out.println(hashTable.get("samsung"));
         System.out.println(hashTable.get("oneplus"));
         System.out.println(hashTable.get("iphone"));
+        System.out.println(hashTable.contains(3));
+        System.out.println(hashTable.contains(5));
 
     }
 }
