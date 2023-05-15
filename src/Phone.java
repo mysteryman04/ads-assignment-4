@@ -1,22 +1,22 @@
 public class Phone {
-    private String name;
-    private int id;
+    private String brand;
+    private int SSN;
 
-    public Phone(String name, int id) {
-        this.name = name;
-        this.id = id;
+    public Phone(String brand, int SSN) {
+        this.brand = brand;
+        this.SSN = SSN;
     }
 
-    public String getName() {
-        return name;
+    public String getBrand() {
+        return brand;
     }
 
-    public int getId() {
-        return id;
+    public int getSSN() {
+        return SSN;
     }
 
     @Override
     public String toString() {
-        return name + " (Grade " + id + ")";
+        return brand + " (SSN " + SSN + ")";
     }
 }
