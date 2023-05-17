@@ -20,7 +20,7 @@ public class MyTestingClass {
         return SSN;
     }
 
-    public void setSSN() {
+    public void setSSN(int SSN) {
         this.SSN = SSN;
     }
 
@@ -28,7 +28,7 @@ public class MyTestingClass {
         return brand;
     }
 
-    public void  setBrand() {
+    public void  setBrand(String brand) {
         this.brand = brand;
     }
 
@@ -67,9 +67,14 @@ public class MyTestingClass {
             System.out.println("Key not found.");
         }
 
-        Phone searchValue = new Phone("phone5", 3);
+        Phone searchValue = new Phone("Xiaomi", 3);
         boolean containsValue = table.contains(searchValue);
         System.out.println("Contains value: " + containsValue);
+
+        boolean contKey = table.containsKey(searchValue);
+        System.out.println("Contains key: " + contKey);
+
+
 
         MyTestingClass searchKey = table.getKey(searchValue);
         if (searchKey != null) {
@@ -77,5 +82,6 @@ public class MyTestingClass {
         } else {
             System.out.println("Value not found.");
         }
+
     }
 }

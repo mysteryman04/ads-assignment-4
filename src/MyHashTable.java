@@ -88,6 +88,18 @@ public class MyHashTable<K, V> {
         }
         return false;
     }
+    public boolean containsKey (Phone key){
+        for (int i = 0; i < M; i++) {
+            HashNode<K, V> node = chainArray[i];
+            while (node != null) {
+                if (node.key.equals(key)) {
+                    return true;
+                }
+                node = node.next;
+            }
+        }
+        return false;
+    }
     public K getKey (V value) {
         for (int i = 0; i < M; i++) {
             HashNode<K, V> node = chainArray[i];
